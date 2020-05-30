@@ -49,4 +49,14 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--audio", "none"]
     vb.customize ["modifyvm", :id, "--paravirtprovider", "minimal"]
   end
+
+  config.vm.provision "install ansible", type: "shell", inline: "pkg install -qy pkg py37-ansible"
+
+  config.vm.provision "main provision" , type: "ansible_local" do |ansible|
+    ansible.limit = "all"
+    ansible.playbook = "provisioning/site.yml"
+    ansible.galaxy_roles_path = "provisioning/roles"
+    ansible.skip_tags = USER_SETTINGS[:ansible_skip_tags]
+    ansible.compatibility_mode = "2.0"
+  end
 end
