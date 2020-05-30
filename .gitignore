@@ -1,0 +1,9 @@
+# freebasd-vagrant/.gitignore
+*.retry
+.vagrant
+.DS_Store
+
+user_settings.rb
+
+shared_folder/
+!.gitkeep

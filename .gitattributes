@@ -1,0 +1,4 @@
+# Detect text files automatically
+* text=auto
+# These files are binary
+*.cer binary
