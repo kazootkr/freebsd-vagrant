@@ -6,7 +6,30 @@ Run FreeBSD provisioning with ansible on vagrant.
 
 ## Getting Started
 
+Building FreeBSD on zfs using packer, run it on virtualbox.
+
 ### Prerequisites
 
 - macOS host
 - virtualbox
+- packer (optional)
+
+### Usage
+
+Register vagrant-box required by vagrantfile.
+
+```shell script
+./tools/add-vagrant-box.sh
+```
+
+Place user config file
+
+```shell script
+cp user_settings.example.rb user_settings.rb
+```
+
+Run vm
+
+```shell script
+vagrant up
+```

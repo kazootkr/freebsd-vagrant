@@ -1,0 +1,8 @@
+{
+  "_comment": "Build with `packer build -var-file=freebsd121.json freebsd.json`",
+  "version": "1.0.0",
+  "iso_checksum": "aa9d34b458826486999ed3e872436b6712ae38cede5ea41de4ab923e3419d461",
+  "iso_name": "FreeBSD-12.1-RELEASE-amd64-disc1.iso",
+  "iso_url": "http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-disc1.iso",
+  "vm_name": "freebsd121"
+}

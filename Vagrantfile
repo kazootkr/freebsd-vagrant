@@ -26,15 +26,15 @@ Vagrant.configure(2) do |config|
 
   config.vm.boot_timeout = 600
 
-  config.vm.box = "freebsd/FreeBSD-12.1-RELEASE"
-  config.vm.box_check_update = true
+  config.vm.box = "FreeBSD/12.1/ZFS"
+  config.vm.box_check_update = false
 
   config.vm.network :private_network, type: "dhcp", nic_type: "virtio"
 
   config.vm.network "public_network", bridge: USER_SETTINGS[:bridge], ip: USER_SETTINGS[:ip_address], netmask: USER_SETTINGS[:ip_netmask], nic_type: "virtio"
 
   config.vm.synced_folder vagrant_root_file, "/vagrant", id: "vagrant-root", type: "rsync",
-                          rsync__exclude: [".git/", ".vagrant/", "shared_folder/"]
+                          rsync__exclude: [".git/", ".vagrant/", "shared_folder/", "packer/"]
 
   config.vm.synced_folder absolute_path("shared_folder"), "/home/vagrant/sharing",
                           type: "nfs"
