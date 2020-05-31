@@ -5,5 +5,7 @@
 
 user_settings.rb
 
-shared_folder/
-!.gitkeep
+shared_folder/*
+!shared_folder/.gitkeep
+
+provisioning/roles/kazootkr.*

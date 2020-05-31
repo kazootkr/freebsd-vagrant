@@ -9,6 +9,10 @@ USER_SETTINGS = {
   ip_address: '192.168.10.34',
   ip_netmask: '255.255.255.0',
   bridge: 'en1: Wi-Fi (AirPort)',
-  # following variables required by ansible
+  ## following variables required by ansible
+  user_name: 'vagrant',
+  # git
+  git_user_name: '<< your name >>',
+  git_user_email: '<< your email >>',
   ansible_skip_tags: []
 }

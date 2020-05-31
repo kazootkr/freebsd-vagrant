@@ -1,0 +1,4 @@
+---
+- src: https://github.com/kazootkr/ansible-role-workspace.git
+  scm: git
+  name: kazootkr.workspace
